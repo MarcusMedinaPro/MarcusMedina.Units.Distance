@@ -6,12 +6,13 @@
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <PackageId>MarcusMedina.Units.Distance</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Title>MarcusMedina.Units.Distance</Title>
     <Description>Fluent distance unit conversion — modern, Swedish, English, and American customary units.</Description>
     <Authors>Marcus Medina</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageProjectUrl>https://github.com/MarcusMedinaPro/MarcusMedina.Units.Distance/wiki</PackageProjectUrl>
     <RepositoryUrl>https://github.com/MarcusMedinaPro/MarcusMedina.Units.Distance</RepositoryUrl>
     <PackageTags>distance;units;conversion;fluent;metric;imperial;swedish</PackageTags>
     <NoWarn>CS1573;CS1591</NoWarn>
