@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <PackageId>MarcusMedina.Units.Distance</PackageId>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <Title>MarcusMedina.Units.Distance</Title>
     <Description>Fluent distance unit conversion — modern, Swedish, English, and American customary units.</Description>
     <Authors>Marcus Medina</Authors>
