@@ -11,7 +11,7 @@ namespace MarcusMedina.Units.Distance.Swedish;
 public static class SwedishDistanceExtensions
 {
     /// <summary>1 svensk mil = 10 000 m (modern definition)</summary>
-    public static Distance Mil(this int value) => new(value * 10_000);
+    public static Distance Mil(this int value) => new(value * 10_000.0);
     public static Distance Mil(this double value) => new(value * 10_000);
 
     public static double ToMil(this Distance d) => d.Meters / 10_000;

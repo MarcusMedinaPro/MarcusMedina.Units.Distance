@@ -21,13 +21,13 @@ public static class MetricDistanceExtensions
     public static Distance Decimeters(this double value) => new(value * 0.1);
     public static Distance Meters(this int value) => new(value);
     public static Distance Meters(this double value) => new(value);
-    public static Distance Decameters(this int value) => new(value * 10);
+    public static Distance Decameters(this int value) => new(value * 10.0);
     public static Distance Decameters(this double value) => new(value * 10);
-    public static Distance Hectometers(this int value) => new(value * 100);
+    public static Distance Hectometers(this int value) => new(value * 100.0);
     public static Distance Hectometers(this double value) => new(value * 100);
-    public static Distance Kilometers(this int value) => new(value * 1000);
+    public static Distance Kilometers(this int value) => new(value * 1000.0);
     public static Distance Kilometers(this double value) => new(value * 1000);
-    public static Distance Myriameters(this int value) => new(value * 10_000);
+    public static Distance Myriameters(this int value) => new(value * 10_000.0);
     public static Distance Myriameters(this double value) => new(value * 10_000);
 
     public static double ToNanometers(this Distance d) => d.Meters / 1e-9;

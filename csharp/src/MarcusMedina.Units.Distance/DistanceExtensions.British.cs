@@ -22,7 +22,7 @@ public static class BritishDistanceExtensions
     public static Distance Miles(this int value) => new(value * 1609.344);
     public static Distance Miles(this double value) => new(value * 1609.344);
     /// <summary>1 nautisk mil = 1852 m</summary>
-    public static Distance NauticalMiles(this int value) => new(value * 1852);
+    public static Distance NauticalMiles(this int value) => new(value * 1852.0);
     public static Distance NauticalMiles(this double value) => new(value * 1852);
 
     public static double ToInches(this Distance d) => d.Meters / 0.0254;
