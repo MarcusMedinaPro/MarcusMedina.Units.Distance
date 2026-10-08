@@ -26,10 +26,10 @@ public static class SwedishOldDistanceExtensions
     public static Distance Famnar(this int value) => new(value * 1.8831);
     public static Distance Famnar(this double value) => new(value * 1.8831);
     /// <summary>1 ref = 1/4 gammal mil = 2672 m</summary>
-    public static Distance Ref(this int value) => new(value * 2672);
+    public static Distance Ref(this int value) => new(value * 2672.0);
     public static Distance Ref(this double value) => new(value * 2672);
     /// <summary>1 gammal svensk landmil = 10 688 m (före 1889)</summary>
-    public static Distance SwedishMiles(this int value) => new(value * 10_688);
+    public static Distance SwedishMiles(this int value) => new(value * 10_688.0);
     public static Distance SwedishMiles(this double value) => new(value * 10_688);
 
     public static double ToTum(this Distance d) => d.Meters / 0.026154;
