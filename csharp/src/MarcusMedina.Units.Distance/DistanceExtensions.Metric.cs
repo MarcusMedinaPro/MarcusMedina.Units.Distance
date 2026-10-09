@@ -9,35 +9,45 @@ namespace MarcusMedina.Units.Distance.Metric;
 /// </summary>
 public static class MetricDistanceExtensions
 {
-    public static Distance Nanometers(this int value) => new(value * 1e-9);
-    public static Distance Nanometers(this double value) => new(value * 1e-9);
-    public static Distance Micrometers(this int value) => new(value * 1e-6);
-    public static Distance Micrometers(this double value) => new(value * 1e-6);
-    public static Distance Millimeters(this int value) => new(value * 0.001);
-    public static Distance Millimeters(this double value) => new(value * 0.001);
-    public static Distance Centimeters(this int value) => new(value * 0.01);
-    public static Distance Centimeters(this double value) => new(value * 0.01);
-    public static Distance Decimeters(this int value) => new(value * 0.1);
-    public static Distance Decimeters(this double value) => new(value * 0.1);
-    public static Distance Meters(this int value) => new(value);
-    public static Distance Meters(this double value) => new(value);
-    public static Distance Decameters(this int value) => new(value * 10.0);
-    public static Distance Decameters(this double value) => new(value * 10);
-    public static Distance Hectometers(this int value) => new(value * 100.0);
-    public static Distance Hectometers(this double value) => new(value * 100);
-    public static Distance Kilometers(this int value) => new(value * 1000.0);
-    public static Distance Kilometers(this double value) => new(value * 1000);
-    public static Distance Myriameters(this int value) => new(value * 10_000.0);
-    public static Distance Myriameters(this double value) => new(value * 10_000);
+    extension(int value)
+    {
+        public Distance Nanometers() => new(value * 1e-9);
+        public Distance Micrometers() => new(value * 1e-6);
+        public Distance Millimeters() => new(value * 0.001);
+        public Distance Centimeters() => new(value * 0.01);
+        public Distance Decimeters() => new(value * 0.1);
+        public Distance Meters() => new(value);
+        public Distance Decameters() => new(value * 10.0);
+        public Distance Hectometers() => new(value * 100.0);
+        public Distance Kilometers() => new(value * 1000.0);
+        public Distance Myriameters() => new(value * 10_000.0);
+    }
 
-    public static double ToNanometers(this Distance d) => d.Meters / 1e-9;
-    public static double ToMicrometers(this Distance d) => d.Meters / 1e-6;
-    public static double ToMillimeters(this Distance d) => d.Meters / 0.001;
-    public static double ToCentimeters(this Distance d) => d.Meters / 0.01;
-    public static double ToDecimeters(this Distance d) => d.Meters / 0.1;
-    public static double ToMeters(this Distance d) => d.Meters;
-    public static double ToDecameters(this Distance d) => d.Meters / 10;
-    public static double ToHectometers(this Distance d) => d.Meters / 100;
-    public static double ToKilometers(this Distance d) => d.Meters / 1000;
-    public static double ToMyriameters(this Distance d) => d.Meters / 10_000;
+    extension(double value)
+    {
+        public Distance Nanometers() => new(value * 1e-9);
+        public Distance Micrometers() => new(value * 1e-6);
+        public Distance Millimeters() => new(value * 0.001);
+        public Distance Centimeters() => new(value * 0.01);
+        public Distance Decimeters() => new(value * 0.1);
+        public Distance Meters() => new(value);
+        public Distance Decameters() => new(value * 10);
+        public Distance Hectometers() => new(value * 100);
+        public Distance Kilometers() => new(value * 1000);
+        public Distance Myriameters() => new(value * 10_000);
+    }
+
+    extension(Distance d)
+    {
+        public double ToNanometers() => d.Meters / 1e-9;
+        public double ToMicrometers() => d.Meters / 1e-6;
+        public double ToMillimeters() => d.Meters / 0.001;
+        public double ToCentimeters() => d.Meters / 0.01;
+        public double ToDecimeters() => d.Meters / 0.1;
+        public double ToMeters() => d.Meters;
+        public double ToDecameters() => d.Meters / 10;
+        public double ToHectometers() => d.Meters / 100;
+        public double ToKilometers() => d.Meters / 1000;
+        public double ToMyriameters() => d.Meters / 10_000;
+    }
 }
