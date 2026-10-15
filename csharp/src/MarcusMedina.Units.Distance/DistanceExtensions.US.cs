@@ -9,21 +9,31 @@ namespace MarcusMedina.Units.Distance.US;
 /// </summary>
 public static class USDistanceExtensions
 {
-    /// <summary>1 US survey foot = 1200/3937 m ≈ 0.3048006 m</summary>
-    public static Distance SurveyFeet(this int value) => new(value * 1200.0 / 3937.0);
-    public static Distance SurveyFeet(this double value) => new(value * 1200.0 / 3937.0);
-    /// <summary>1 US survey mile = 5280 survey feet ≈ 1609.347 m</summary>
-    public static Distance SurveyMiles(this int value) => new(value * 5280.0 * 1200.0 / 3937.0);
-    public static Distance SurveyMiles(this double value) => new(value * 5280.0 * 1200.0 / 3937.0);
-    /// <summary>1 US rod = 16.5 survey feet ≈ 5.02921 m</summary>
-    public static Distance UsRods(this int value) => new(value * 16.5 * 1200.0 / 3937.0);
-    public static Distance UsRods(this double value) => new(value * 16.5 * 1200.0 / 3937.0);
-    /// <summary>1 US chain = 66 survey feet ≈ 20.11684 m</summary>
-    public static Distance UsChains(this int value) => new(value * 66.0 * 1200.0 / 3937.0);
-    public static Distance UsChains(this double value) => new(value * 66.0 * 1200.0 / 3937.0);
+    extension(int value)
+    {
+        /// <summary>1 US survey foot = 1200/3937 m ≈ 0.3048006 m</summary>
+        public Distance SurveyFeet() => new(value * 1200.0 / 3937.0);
+        /// <summary>1 US survey mile = 5280 survey feet ≈ 1609.347 m</summary>
+        public Distance SurveyMiles() => new(value * 5280.0 * 1200.0 / 3937.0);
+        /// <summary>1 US rod = 16.5 survey feet ≈ 5.02921 m</summary>
+        public Distance UsRods() => new(value * 16.5 * 1200.0 / 3937.0);
+        /// <summary>1 US chain = 66 survey feet ≈ 20.11684 m</summary>
+        public Distance UsChains() => new(value * 66.0 * 1200.0 / 3937.0);
+    }
 
-    public static double ToSurveyFeet(this Distance d) => d.Meters / (1200.0 / 3937.0);
-    public static double ToSurveyMiles(this Distance d) => d.Meters / (5280.0 * 1200.0 / 3937.0);
-    public static double ToUsRods(this Distance d) => d.Meters / (16.5 * 1200.0 / 3937.0);
-    public static double ToUsChains(this Distance d) => d.Meters / (66.0 * 1200.0 / 3937.0);
+    extension(double value)
+    {
+        public Distance SurveyFeet() => new(value * 1200.0 / 3937.0);
+        public Distance SurveyMiles() => new(value * 5280.0 * 1200.0 / 3937.0);
+        public Distance UsRods() => new(value * 16.5 * 1200.0 / 3937.0);
+        public Distance UsChains() => new(value * 66.0 * 1200.0 / 3937.0);
+    }
+
+    extension(Distance d)
+    {
+        public double ToSurveyFeet() => d.Meters / (1200.0 / 3937.0);
+        public double ToSurveyMiles() => d.Meters / (5280.0 * 1200.0 / 3937.0);
+        public double ToUsRods() => d.Meters / (16.5 * 1200.0 / 3937.0);
+        public double ToUsChains() => d.Meters / (66.0 * 1200.0 / 3937.0);
+    }
 }
